@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } fro
 import { getAllPosts, getPostBySlug } from 'lib/api';
 import { markdownToHtml } from 'lib/markdownToHtml';
 import { Post } from 'src/types/Post';
+import { replaceComponents } from 'lib/replaceComponents';
 
 type StaticProps = {
   post: Partial<Post>;
@@ -16,7 +17,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 const PostPage: NextPage<Props> = ({ post }) => {
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <article>{replaceComponents(post.content)}</article>
     </>
   );
 };
@@ -53,7 +54,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
         slug: post.slug,
       },
     })),
-    fallback: false,
+    fallback: false, // ISR
   };
 };
 
