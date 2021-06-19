@@ -1,5 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { getAllPosts } from 'lib/api';
+import { getAllPosts } from 'src/lib/api';
 import { Post } from 'src/types/Post';
 import Link from 'next/link';
 

@@ -2,8 +2,8 @@ import React from 'react';
 import unified from 'unified';
 import rehypeParse from 'rehype-parse';
 import rehypeReact from 'rehype-react';
-import { InternalOnlyNextLink } from 'src/components/case/InternalOnlyNextLink';
-import { MarkdownImage } from 'src/components/domain/MarkdownImage';
+import { InternalOnlyNextLink } from 'src/components/markdowns/InternalOnlyNextLink';
+import { MarkdownImage } from 'src/components/markdowns/MarkdownImage';
 
 export function replaceComponents(html: string) {
   return unified()

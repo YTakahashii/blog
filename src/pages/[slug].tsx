@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { getAllPosts, getPostBySlug } from 'lib/api';
-import { markdownToHtml } from 'lib/markdownToHtml';
+import { getAllPosts, getPostBySlug } from 'src/lib/api';
+import { markdownToHtml } from 'src/lib/markdownToHtml';
 import { Post } from 'src/types/Post';
-import { replaceComponents } from 'lib/replaceComponents';
+import { replaceComponents } from 'src/lib/replaceComponents';
 
 type StaticProps = {
   post: Partial<Post>;
