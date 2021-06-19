@@ -9,7 +9,7 @@ export const MarkdownImage: React.VFC<Props> = ({ src, width, height, ...rest })
 
   return (
     <div style={{ display: 'grid', placeItems: 'center' }}>
-      <Image src={nextSrc} width={700} height={394} {...rest} />
+      <Image src={nextSrc} width={700} height={394} />
     </div>
   );
 };
