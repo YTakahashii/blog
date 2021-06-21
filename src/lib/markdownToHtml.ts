@@ -1,5 +1,6 @@
 import unified from 'unified';
 import remarkParse from 'remark-parse';
+import remarkGitHub from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeShiki from '@leafac/rehype-shiki';
@@ -8,6 +9,7 @@ import * as shiki from 'shiki';
 export async function markdownToHtml(markdown: string) {
   const result = unified() // unifiedライブラリの処理をまとめる
     .use(remarkParse) // Markdownをmdast(Markdownの抽象構文木)に変換
+    .use(remarkGitHub)
     .use(remarkRehype) // mdastをhast(HTMLの抽象構文木)に変換
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({

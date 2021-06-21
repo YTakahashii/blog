@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 type Props = ComponentPropsWithoutRef<'img'>;
 
-export const MarkdownImage: React.VFC<Props> = ({ src, width, height, ...rest }) => {
+export const img: React.VFC<Props> = ({ src, width, height, ...rest }) => {
   const relativePublicPath = '../public' as const;
   const nextSrc = src.startsWith(relativePublicPath) ? src.substring(relativePublicPath.length) : src; // ローカルの md エディタでも画像を表示したいためパスを変換
 

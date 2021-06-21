@@ -33,13 +33,13 @@ export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({ para
     'ogImage',
   ]);
 
-  const content = await markdownToHtml(post.content ?? '');
+  const html = await markdownToHtml(post.content ?? '');
 
   return {
     props: {
       post: {
         ...post,
-        content,
+        content: html,
       },
     },
   };
