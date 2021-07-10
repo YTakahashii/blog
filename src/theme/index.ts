@@ -6,8 +6,8 @@ export const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    heading: ` Inter, 'Noto Sans JP', -apple-system, sans-serif`,
-    body: ` Inter, 'Noto Sans JP', -apple-system, sans-serif`,
+    heading: `Inter, 'Noto Sans JP'`,
+    body: `Inter,'Noto Sans JP'`,
   },
   styles: {
     global: ({ colorMode }) => ({
@@ -24,7 +24,7 @@ export const theme = extendTheme({
       },
       h1: {
         fontSize: '4xl',
-        fontWeight: 'extrabold',
+        fontWeight: 900,
       },
       h2: {
         fontSize: '3xl',

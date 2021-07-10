@@ -52,7 +52,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
         slug: post.slug,
       },
     })),
-    fallback: false, // ISR
+    fallback: false, // ISR はしない
   };
 };
 

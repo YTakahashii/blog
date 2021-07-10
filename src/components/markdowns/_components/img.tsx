@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react';
-import Image from 'next/image';
-
+import { Image } from '@chakra-ui/react';
 type Props = ComponentPropsWithoutRef<'img'>;
 
 export const img: React.VFC<Props> = ({ src, width, height, ...rest }) => {
