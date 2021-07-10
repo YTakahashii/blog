@@ -2,27 +2,25 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } fro
 import { getAllPosts, getPostBySlug } from 'src/lib/api';
 import { markdownToHtml } from 'src/lib/markdownToHtml';
 import { Post } from 'src/types/Post';
-import { replaceComponents } from 'src/lib/replaceComponents';
-
-type StaticProps = {
-  post: Partial<Post>;
-};
-
-type Params = {
-  slug: string;
-};
+import { Markdown } from 'src/components/markdowns';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const PostPage: NextPage<Props> = ({ post }) => {
   return (
     <>
-      <article>{replaceComponents(post.content)}</article>
+      <article>
+        <Markdown rawHtml={post?.content ?? ''} />
+      </article>
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({ params }) => {
+type Params = {
+  slug: string;
+};
+
+export const getStaticProps: GetStaticProps<{ post: Partial<Post> }, Params> = async ({ params }) => {
   const post = getPostBySlug(params.slug, [
     'title',
     'slug',
