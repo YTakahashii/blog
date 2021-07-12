@@ -1,10 +1,11 @@
 name: github pages
 
-# masterブランチにプッシュしたときjobsに記述した操作を行う
 on:
   push:
     branches:
     - main
+env:
+  NEXT_PUBLIC_BASE_PATH: /tech-blog
 
 jobs:
   build-deploy:
