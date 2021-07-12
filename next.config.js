@@ -1,10 +1,6 @@
-const { PHASE_PRODUCTION_BUILD } = require('next/constants');
-
 const PROJECT_NAME = '/tech-blog';
+const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = (phase, { defaultConfig }) => {
-  if (phase === PHASE_PRODUCTION_BUILD) {
-    return { ...defaultConfig, assetPrefix: PROJECT_NAME, basePath: PROJECT_NAME };
-  }
-  return defaultConfig;
+module.exports = {
+  assetPrefix: isProd ? PROJECT_NAME : '',
 };
