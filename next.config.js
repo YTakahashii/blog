@@ -1,6 +1,6 @@
 const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 
-const PROJECT_NAME = 'tech-blog';
+const PROJECT_NAME = '/tech-blog';
 
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_PRODUCTION_BUILD) {
