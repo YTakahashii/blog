@@ -2,6 +2,7 @@ import { Heading, VStack, Text } from '@chakra-ui/react';
 import { InternalLink } from 'src/components/bases/InternalLink';
 import { Post } from 'src/types/Post';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { staticFolder } from 'src/constants/config';
 
 type Props = {
   post: Partial<Post>;
@@ -9,7 +10,7 @@ type Props = {
 
 export const PostListItem: React.VFC<Props> = ({ post }) => (
   <VStack align="stretch" spacing={5} my={4}>
-    <InternalLink href={post?.slug ?? ''}>
+    <InternalLink href={`${staticFolder}${post?.slug}` ?? ''}>
       <Heading as="h2" fontSize="2xl" m={0}>
         {post.title}
       </Heading>

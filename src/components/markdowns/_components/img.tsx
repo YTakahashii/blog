@@ -1,12 +1,8 @@
 import { ComponentPropsWithoutRef } from 'react';
 import { Image } from '@chakra-ui/react';
-import getConfig from 'next/config';
+import { staticFolder } from 'src/constants/config';
 
 type Props = ComponentPropsWithoutRef<'img'>;
-
-const {
-  publicRuntimeConfig: { staticFolder },
-} = getConfig();
 
 export const img: React.VFC<Props> = ({ src, width, height, ...rest }) => {
   const relativePublicPath = '../public' as const;

@@ -5,5 +5,8 @@ const STATIC_FOLDER = isProd ? PROJECT_NAME : '';
 module.exports = {
   assetPrefix: STATIC_FOLDER,
   basePath: STATIC_FOLDER,
-  staticFolder: STATIC_FOLDER,
+  publicRuntimeConfig: {
+    // Will be available on both server and client
+    staticFolder: STATIC_FOLDER,
+  },
 };
