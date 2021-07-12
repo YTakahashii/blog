@@ -9,7 +9,7 @@ export const img: React.VFC<Props> = ({ src, width, height, ...rest }) => {
 
   return (
     <div style={{ display: 'grid', placeItems: 'center' }}>
-      <Image src={process.env.NODE_ENV === 'production' ? `.${nextSrc}` : nextSrc} width={700} height={394} />
+      <Image src={process.env.NODE_ENV === 'production' ? `/tech-blog${nextSrc}` : nextSrc} width={700} height={394} />
     </div>
   );
 };
