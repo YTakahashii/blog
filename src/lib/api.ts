@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { Post, PostKey } from '../types/Post';
 
 const postsDirectory = join(process.cwd(), '_posts');
+const privatePostPrefix = '_' as const;
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -33,9 +34,10 @@ export function getPostBySlug(slug: string, fields: PostKey[] = []) {
   return post;
 }
 
-export function getAllPosts(fields: PostKey[] = []) {
+export function getAllPosts(fields: PostKey[] = [], scope: 'public' | 'all' = 'public') {
   const slugs = getPostSlugs();
-  const posts = slugs
+  const targetSlugs = scope === 'public' ? slugs.filter((slug) => slug.charAt(0) !== privatePostPrefix) : slugs;
+  const posts = targetSlugs
     .map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.publishDate > post2.publishDate ? -1 : 1));
   return posts;

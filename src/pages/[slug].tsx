@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps<{ post: Partial<Post> }, Params> = a
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const posts = getAllPosts(['slug']);
+  const posts = getAllPosts(['slug'], 'all');
 
   return {
     paths: posts.map((post) => ({
