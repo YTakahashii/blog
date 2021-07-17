@@ -43,7 +43,7 @@ export const theme = extendTheme({
       p: {
         my: 5,
       },
-      'a p, em, li, td, span': {
+      'a, p, em, li, td, span': {
         color: 'gray.600',
       },
       strong: {

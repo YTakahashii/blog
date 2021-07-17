@@ -3,16 +3,21 @@ import { getAllPosts, getPostBySlug } from 'src/lib/api';
 import { markdownToHtml } from 'src/lib/markdownToHtml';
 import { Post } from 'src/types/Post';
 import { Markdown } from 'src/components/markdowns';
+import { PostHeader } from 'src/components/layouts/PostHeader';
+import { Box } from '@chakra-ui/react';
+import { Footer } from 'src/components/layouts/Footer';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const PostPage: NextPage<Props> = ({ post }) => {
   return (
-    <>
-      <article>
-        <Markdown rawHtml={post?.content ?? ''} />
-      </article>
-    </>
+    <Box as="article">
+      <PostHeader post={post} />
+      <Markdown rawHtml={post?.content ?? ''} />
+      <Footer>
+        <Footer.BackToTop />
+      </Footer>
+    </Box>
   );
 };
 
