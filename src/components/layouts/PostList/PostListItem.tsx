@@ -3,7 +3,7 @@ import { InternalLink } from 'src/components/bases/InternalLink';
 import { Post } from 'src/types/Post';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { basePath } from 'src/constants/env';
-import { splitBySlash } from 'src/utils/DateFormatter';
+import { DateFormatter } from 'src/utils/DateFormatter';
 
 type Props = {
   post: Partial<Post>;
@@ -14,7 +14,7 @@ export const PostListItem: React.VFC<Props> = ({ post }) => (
     <Divider />
     <VStack align="stretch" spacing={5}>
       <VStack align="stretch" spacing={1}>
-        <Text m={0}>{splitBySlash(post?.publishDate)}</Text>
+        <Text m={0}>{DateFormatter.splitBySlash(post?.publishDate)}</Text>
         <InternalLink href={`${basePath}${post?.slug}` ?? ''}>
           <Heading as="h2" fontSize="2xl" m={0}>
             {post.title}
