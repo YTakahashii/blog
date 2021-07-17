@@ -1,26 +1,33 @@
-import { Heading, VStack, Text } from '@chakra-ui/react';
+import { Heading, VStack, Text, Divider } from '@chakra-ui/react';
 import { InternalLink } from 'src/components/bases/InternalLink';
 import { Post } from 'src/types/Post';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { basePath } from 'src/constants/env';
+import { splitBySlash } from 'src/utils/DateFormatter';
 
 type Props = {
   post: Partial<Post>;
 };
 
 export const PostListItem: React.VFC<Props> = ({ post }) => (
-  <VStack align="stretch" spacing={5} my={4}>
-    <InternalLink href={`${basePath}${post?.slug}` ?? ''}>
-      <Heading as="h2" fontSize="2xl" m={0}>
-        {post.title}
-      </Heading>
-    </InternalLink>
-    <Text m={0}>{post?.excerpt}</Text>
-    <InternalLink href={post?.slug ?? ''}>
-      <Text color="teal.500" m={0}>
-        続きを読む
-        <ArrowForwardIcon />
-      </Text>
-    </InternalLink>
+  <VStack align="stretch" spacing={10} my={10}>
+    <Divider />
+    <VStack align="stretch" spacing={5}>
+      <VStack align="stretch" spacing={1}>
+        <Text m={0}>{splitBySlash(post?.publishDate)}</Text>
+        <InternalLink href={`${basePath}${post?.slug}` ?? ''}>
+          <Heading as="h2" fontSize="2xl" m={0}>
+            {post.title}
+          </Heading>
+        </InternalLink>
+      </VStack>
+      <Text m={0}>{post?.excerpt}</Text>
+      <InternalLink href={post?.slug ?? ''}>
+        <Text color="blue.500" m={0}>
+          続きを読む
+          <ArrowForwardIcon />
+        </Text>
+      </InternalLink>
+    </VStack>
   </VStack>
 );

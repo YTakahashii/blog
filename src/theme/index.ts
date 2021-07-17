@@ -24,7 +24,6 @@ export const theme = extendTheme({
       },
       h1: {
         fontSize: '4xl',
-        fontWeight: 900,
       },
       h2: {
         fontSize: '3xl',
@@ -44,7 +43,7 @@ export const theme = extendTheme({
       p: {
         my: 5,
       },
-      'p, em, li, td, span': {
+      'a p, em, li, td, span': {
         color: 'gray.600',
       },
       strong: {

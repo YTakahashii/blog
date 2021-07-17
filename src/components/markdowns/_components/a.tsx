@@ -1,15 +1,17 @@
 import { ComponentPropsWithoutRef } from 'react';
-import Link from 'next/link';
+import NextLink from 'next/link';
+import { Link } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 type Props = ComponentPropsWithoutRef<'a'>;
 
 export const a: React.FC<Props> = ({ children, href }) =>
   href.startsWith('/') || href === '' ? (
-    <Link href={href}>
-      <a>{children}</a>
-    </Link>
+    <NextLink href={href} passHref>
+      <Link textDecoration="underline">{children}</Link>
+    </NextLink>
   ) : (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <Link href={href} color="blue.500" textDecoration="underline" isExternal>
       {children}
-    </a>
+    </Link>
   );
