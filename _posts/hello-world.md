@@ -7,13 +7,14 @@ ogImage:
   url: '/assets/blog/hello-world/cover.png'
 ---
 
-# テスト記事 ABC
-
 これはテスト記事です。
 
 - **太字**
   - _斜体_
     - `code`
+      - [`code with link`](https://google.com)
+        - [external link](https://google.com)
+        - [internal link](/)
 
 ```js
 const helloWorld = 'hello world';
