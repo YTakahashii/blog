@@ -1,13 +1,16 @@
 import { extendTheme } from '@chakra-ui/react';
 
+const fontFamily =
+  `Inter, 'Noto Sans JP', -apple-system, 'Segoe UI', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', メイリオ, meiryo, sans-serif` as const;
+
 export const theme = extendTheme({
   config: {
     initialColorMode: 'light',
     useSystemColorMode: false,
   },
   fonts: {
-    heading: `Inter, 'Noto Sans JP'`,
-    body: `Inter,'Noto Sans JP'`,
+    heading: fontFamily,
+    body: fontFamily,
   },
   styles: {
     global: ({ colorMode }) => ({
