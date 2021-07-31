@@ -6,6 +6,7 @@ on:
     - main
 env:
   NEXT_PUBLIC_BASE_PATH: /blog
+  NEXT_PUBLIC_GA_TRACKING_ID: G-F9R01VV3HK
 
 jobs:
   build-deploy:
