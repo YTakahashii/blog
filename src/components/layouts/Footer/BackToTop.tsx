@@ -6,7 +6,7 @@ export const BackToTop: React.VFC = () => (
   <Box>
     <Divider />
     <Box py={6}>
-      <InternalLink href="/" color="linkedin.600">
+      <InternalLink href="/" color="linkedin.700">
         <ArrowBackIcon mr="2px" />
         最新の投稿一覧に戻る
       </InternalLink>

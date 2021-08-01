@@ -10,7 +10,7 @@ export const a: React.FC<Props> = ({ children, href }) =>
       <Link textDecoration="underline">{children}</Link>
     </NextLink>
   ) : (
-    <Link href={href} color="linkedin.600" textDecoration="underline" isExternal>
+    <Link href={href} color="linkedin.700" textDecoration="underline" isExternal>
       {children}
     </Link>
   );
