@@ -2,12 +2,14 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ColorModeScript } from '@chakra-ui/react';
 import { theme } from 'src/theme';
 import { GA_TRACKING_ID } from 'src/lib/gtag';
+import { basePath } from 'src/constants/env';
+
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="icon" href="icon.svg" type="image/svg+xml" />
+          <link rel="icon" href={`${basePath}/icon.svg`} type="image/svg+xml" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
             rel="stylesheet"
