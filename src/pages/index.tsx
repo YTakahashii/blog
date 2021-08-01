@@ -15,7 +15,7 @@ const PostsPage: NextPage<Props> = ({ posts }) => {
     <>
       <VStack align="stretch" spacing={3}>
         <Heading as="h1" m={0} fontSize={{ md: '4xl', base: '3xl' }}>
-          🗞 最新の投稿
+          最新の投稿
         </Heading>
         <Text m={0}>技術に関連する取り組みや学んだことを日記感覚でまとめます。</Text>
       </VStack>
