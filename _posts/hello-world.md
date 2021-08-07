@@ -12,16 +12,8 @@ ogImage:
 - **太字**
   - _斜体_
     - `code`
-      - [`code with link`](https://google.com)
-        - [external link](https://google.com)
-        - [internal link](/)
-
-```js
-const helloWorld = 'hello world';
-console.log(helloWorld);
-```
-
-qqq
+    - [external link](https://google.com)
+    - [internal link](/)
 
 ```tsx
 import { Box } from '@chakra-ui/react';
@@ -30,8 +22,7 @@ const item = <Box>item</Box>;
 
 # h1 ひらがな
 
-- [x] チェックボックス
-- [ ] チェックボックス
+本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
 
 ## h2 漢字
 
