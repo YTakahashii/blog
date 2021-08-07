@@ -11,7 +11,7 @@ type UseMetaDataArgs = {
 type UseMetaDataFn = (args: UseMetaDataArgs) => MetaData;
 
 const defaultMetaData: Omit<MetaData, 'url'> = {
-  title: `最新の記事一覧｜${SITE_NAME}`,
+  title: `最新の投稿｜${SITE_NAME}`,
   description: '技術に関連する取り組みや学んだことを日記感覚でまとめます。',
   image: '',
 };
