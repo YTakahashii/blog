@@ -1,11 +1,11 @@
-import { Image } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { SkeletonImage } from 'src/components/bases/SkeletonImage';
 import { basePath } from 'src/constants/env';
 
 export const SiteIcon: React.VFC = () => (
   <NextLink href="/">
     <a>
-      <Image
+      <SkeletonImage
         src={`${basePath}/logo.svg`}
         alt="y.t.dev"
         aria-label="トップページへ"
