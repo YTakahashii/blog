@@ -9,7 +9,7 @@ export const SiteIcon: React.VFC = () => (
         src={`${basePath}/logo.svg`}
         alt="y.t.dev"
         aria-label="トップページへ"
-        w="150px"
+        w={{ md: '150px', base: '120px' }}
         h="auto"
         cursor="pointer"
       />
