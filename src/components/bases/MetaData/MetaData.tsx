@@ -21,7 +21,7 @@ export const MetaData: React.VFC<Props> = ({ post }) => {
       <meta property="og:url" content={url} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:alt" content={description} />
+      <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content={SITE_NAME} />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ export const MetaData: React.VFC<Props> = ({ post }) => {
       <meta name="twitter:url" content={url} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:alt" content={description} />
+      <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content={TWITTER_ID} />
       <meta name="twitter:creator" content={TWITTER_ID} />
 
