@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const PostListItem: React.VFC<Props> = ({ post }) => (
-  <VStack align="stretch" spacing={10} my={10}>
+  <VStack align="stretch" role="listitem" spacing={10} my={10}>
     <Divider />
     <VStack align="stretch" spacing={5}>
       <VStack align="stretch" spacing={1}>
