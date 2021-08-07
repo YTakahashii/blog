@@ -6,18 +6,22 @@ import { Markdown } from 'src/components/markdowns';
 import { PostHeader } from 'src/components/layouts/PostHeader';
 import { Box } from '@chakra-ui/react';
 import { Footer } from 'src/components/layouts/Footer';
+import { MetaData } from 'src/components/bases/MetaData';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const PostPage: NextPage<Props> = ({ post }) => {
   return (
-    <Box as="article">
-      <PostHeader post={post} />
-      <Markdown rawHtml={post?.content ?? ''} />
-      <Footer>
-        <Footer.BackToTop />
-      </Footer>
-    </Box>
+    <>
+      <MetaData post={post} />
+      <Box as="article">
+        <PostHeader post={post} />
+        <Markdown rawHtml={post?.content ?? ''} />
+        <Footer>
+          <Footer.BackToTop />
+        </Footer>
+      </Box>
+    </>
   );
 };
 
