@@ -4,7 +4,7 @@ excerpt: 'これはテスト記事です。'
 coverImage: '/assets/blog/hello-world/cover.png'
 publishDate: '2020-03-16T05:35:07.322Z'
 ogImage:
-  url: '/assets/blog/hello-world/cover.png'
+  url: 'https://og-image-for-blog.vercel.app/**Hello%20World!!**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg'
 ---
 
 これはテスト記事です。
