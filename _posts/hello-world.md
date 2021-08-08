@@ -9,6 +9,8 @@ ogImage:
 
 これはテスト記事です。
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">出社すると雑談できるのいいね</p>&mdash; yuchan (@Wakeupsloth) <a href="https://twitter.com/Wakeupsloth/status/1423602195933499392?ref_src=twsrc%5Etfw">August 6, 2021</a></blockquote>
+
 - **太字**
   - _斜体_
     - `code`
