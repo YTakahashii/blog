@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const MetaData: React.VFC<Props> = ({ post }) => {
-  const { title, description, url, image } = useMetaData({ post });
+  const { title, description, url, image, noIndex } = useMetaData({ post });
 
   return (
     <Head>
@@ -34,6 +34,8 @@ export const MetaData: React.VFC<Props> = ({ post }) => {
       <meta name="twitter:creator" content={TWITTER_ID} />
 
       <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+
+      {noIndex && <meta name="robots" content="noindex,nofollow,noarchive" />}
     </Head>
   );
 };

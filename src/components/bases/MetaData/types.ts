@@ -3,4 +3,5 @@ export type MetaData = {
   description: string;
   url: string;
   image: string;
+  noIndex?: boolean;
 };

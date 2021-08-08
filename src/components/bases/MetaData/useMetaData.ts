@@ -19,6 +19,7 @@ const defaultMetaData: Omit<MetaData, 'url'> = {
 export const useMetaData: UseMetaDataFn = ({ post }) => {
   const router = useRouter();
   const url = `${uri}${router.basePath}${router.asPath}`;
+  const noIndex = router.asPath.startsWith('_', 1);
 
   if (!post) {
     return {
@@ -32,5 +33,6 @@ export const useMetaData: UseMetaDataFn = ({ post }) => {
     description: post.excerpt,
     image: post.ogImage.url,
     url,
+    noIndex,
   };
 };
