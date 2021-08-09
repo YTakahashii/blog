@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { Post } from 'src/types/Post';
 import { useMetaData } from './useMetaData';
-import { SITE_NAME, TWITTER_ID } from './constants';
+import { SITE_NAME, TWITTER_ID } from 'src/constants/site';
 
 type Props = {
-  post?: Partial<Post>;
+  post?: Post;
 };
 
 export const MetaData: React.VFC<Props> = ({ post }) => {
@@ -30,8 +30,8 @@ export const MetaData: React.VFC<Props> = ({ post }) => {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:site" content={TWITTER_ID} />
-      <meta name="twitter:creator" content={TWITTER_ID} />
+      <meta name="twitter:site" content={`@${TWITTER_ID}`} />
+      <meta name="twitter:creator" content={`@${TWITTER_ID}`} />
 
       <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
 

@@ -8,6 +8,8 @@ export type Post = {
     url: string;
   };
   content: string;
+  url: string;
+  isPrivate: boolean;
 };
 
 export type PostKey = keyof Post;

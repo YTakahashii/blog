@@ -3,7 +3,7 @@ import { Post } from 'src/types/Post';
 import { PostListItem } from './PostListItem';
 
 type Props = {
-  posts: Partial<Post>[];
+  posts: Post[];
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (

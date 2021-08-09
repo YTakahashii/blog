@@ -6,7 +6,7 @@ import { Text, Heading, VStack } from '@chakra-ui/react';
 import { MetaData } from 'src/components/bases/MetaData';
 
 type StaticProps = {
-  posts: Partial<Post>[];
+  posts: Post[];
 };
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
@@ -27,7 +27,7 @@ const PostsPage: NextPage<Props> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps<StaticProps> = async () => {
-  const posts = getAllPosts(['title', 'publishDate', 'slug', 'excerpt']);
+  const posts = getAllPosts();
 
   return {
     props: {

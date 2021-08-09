@@ -31,16 +31,8 @@ type Params = {
   slug: string;
 };
 
-export const getStaticProps: GetStaticProps<{ post: Partial<Post> }, Params> = async ({ params }) => {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'slug',
-    'publishDate',
-    'content',
-    'coverImage',
-    'excerpt',
-    'ogImage',
-  ]);
+export const getStaticProps: GetStaticProps<{ post: Post }, Params> = async ({ params }) => {
+  const post = getPostBySlug(params.slug);
 
   const html = await markdownToHtml(post.content ?? '');
 
@@ -55,7 +47,7 @@ export const getStaticProps: GetStaticProps<{ post: Partial<Post> }, Params> = a
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const posts = getAllPosts(['slug'], 'all');
+  const posts = getAllPosts('all');
 
   return {
     paths: posts.map((post) => ({

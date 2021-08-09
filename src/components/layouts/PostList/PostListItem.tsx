@@ -5,7 +5,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { DateFormatter } from 'src/utils/DateFormatter';
 
 type Props = {
-  post: Partial<Post>;
+  post: Post;
 };
 
 export const PostListItem: React.VFC<Props> = ({ post }) => (

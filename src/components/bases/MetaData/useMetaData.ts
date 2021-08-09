@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import { uri } from 'src/constants/env';
 import { Post } from 'src/types/Post';
-import { SITE_NAME } from './constants';
+import { SITE_NAME } from 'src/constants/site';
 import { MetaData } from './types';
 
 type UseMetaDataArgs = {
-  post?: Partial<Post>;
+  post?: Post;
 };
 
 type UseMetaDataFn = (args: UseMetaDataArgs) => MetaData;
@@ -18,10 +18,10 @@ const defaultMetaData: Omit<MetaData, 'url'> = {
 
 export const useMetaData: UseMetaDataFn = ({ post }) => {
   const { basePath, asPath } = useRouter();
-  const url = `${uri}${basePath}${asPath}`;
-  const noIndex = asPath.startsWith('_', 1);
 
   if (!post) {
+    const url = `${uri}${basePath}${asPath}`;
+
     return {
       ...defaultMetaData,
       url,
@@ -32,7 +32,7 @@ export const useMetaData: UseMetaDataFn = ({ post }) => {
     title: `${post.title}｜${SITE_NAME}`,
     description: post.excerpt,
     image: post.ogImage.url,
-    url,
-    noIndex,
+    url: post.url,
+    noIndex: post.isPrivate,
   };
 };

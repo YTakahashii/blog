@@ -1,5 +1,6 @@
 import { BackToTop } from './BackToTop';
 import { Box } from '@chakra-ui/react';
+
 type ChildElements = {
   BackToTop: typeof BackToTop;
 };
