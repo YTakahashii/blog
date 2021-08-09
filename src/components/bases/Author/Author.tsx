@@ -1,24 +1,22 @@
-import { Avatar, AvatarProps, HStack, VStack, Text, Link } from '@chakra-ui/react';
+import { Avatar, HStack, Text } from '@chakra-ui/react';
+import { LinkedIconButton } from '../LinkedIconButton';
 
-type Props = AvatarProps & {
-  twitterId?: string;
-};
-
-export const Author: React.VFC<Props> = ({ name, twitterId, ...rest }) => (
+export const Author: React.VFC = () => (
   <HStack>
-    <Avatar name={name} {...rest} />
-    <VStack align="stretch">
-      <Text fontSize="sm" m={0}>
-        {name}
-      </Text>
-      <Link
-        href={`https://twitter.com/${twitterId}`}
-        isExternal
-        m={0}
-        fontSize="sm"
-        color="linkedin.700"
-        style={{ marginTop: '0 !important' }}
-      >{`@${twitterId}`}</Link>
-    </VStack>
+    <Avatar name="Yuta Takahashi" src="https://bit.ly/wakeupsloth" size="sm" />
+    <Text fontSize="sm" m={0}>
+      Yuta Takahashi
+    </Text>
+    <LinkedIconButton>
+      <LinkedIconButton.Twitter
+        href="https://twitter.com/Wakeupsloth"
+        aria-label="Yuta Takahashi の Twitter アカウント"
+      />
+      <LinkedIconButton.Facebook
+        href="https://www.facebook.com/yuta.takahashi.me"
+        aria-label="Yuta Takahashi の Facebook アカウント"
+      />
+      <LinkedIconButton.GitHub href="https://github.com/YTakahashii" aria-label="Yuta Takahashi の GitHub アカウント" />
+    </LinkedIconButton>
   </HStack>
 );
