@@ -1,8 +1,10 @@
-import { BackToTop } from './BackToTop';
 import { Box } from '@chakra-ui/react';
+import { BackToTop } from './BackToTop';
+import { ShareOnSns } from './ShareOnSns';
 
 type ChildElements = {
   BackToTop: typeof BackToTop;
+  ShareOnSns: typeof ShareOnSns;
 };
 
 export const Footer: React.FC & ChildElements = ({ children }) => (
@@ -12,3 +14,4 @@ export const Footer: React.FC & ChildElements = ({ children }) => (
 );
 
 Footer.BackToTop = BackToTop;
+Footer.ShareOnSns = ShareOnSns;

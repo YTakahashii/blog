@@ -20,6 +20,7 @@ const PostPage: NextPage<Props> = ({ post }) => {
         <PostHeader post={post} />
         <Markdown rawHtml={post?.content ?? ''} />
         <Footer>
+          <Footer.ShareOnSns post={post} />
           <Footer.BackToTop />
         </Footer>
       </Box>
