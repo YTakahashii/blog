@@ -6,7 +6,7 @@ type Props = {
 } & IconButtonProps;
 
 export const FacebookButton: React.VFC<Props> = ({ href, ...rest }) => (
-  <Link href={href} isExternal>
+  <Link href={href} display="flex" isExternal>
     <IconButton colorScheme="facebook" size="sm" borderRadius="full" icon={<FaFacebookF />} {...rest} />
   </Link>
 );

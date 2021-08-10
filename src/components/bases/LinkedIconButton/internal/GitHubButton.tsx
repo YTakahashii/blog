@@ -6,7 +6,7 @@ type Props = {
 } & IconButtonProps;
 
 export const GitHubButton: React.VFC<Props> = ({ href, ...rest }) => (
-  <Link href={href} isExternal>
+  <Link href={href} display="flex" isExternal>
     <IconButton
       color="white"
       bg="#24292f"

@@ -21,11 +21,9 @@ export const PostListItem: React.VFC<Props> = ({ post }) => (
         </InternalLink>
       </VStack>
       <Text m={0}>{post?.excerpt}</Text>
-      <InternalLink href={post?.slug ?? ''} aria-label={`${post.title}の続きを読む`}>
-        <Text color="linkedin.700" m={0}>
-          続きを読む
-          <ArrowForwardIcon />
-        </Text>
+      <InternalLink href={post?.slug ?? ''} aria-label={`${post.title}の続きを読む`} color="linkedin.700">
+        続きを読む
+        <ArrowForwardIcon />
       </InternalLink>
     </VStack>
   </VStack>

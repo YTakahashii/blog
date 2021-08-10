@@ -13,17 +13,19 @@ export const ShareOnSns: React.VFC<Props> = ({ post }) => {
 
   return (
     <Box>
-      <Divider />
       <HStack py={6}>
-        <Text fontWeight="bold">SNSでシェアする：</Text>
         <LinkedIconButton>
           <LinkedIconButton.Twitter
             href={`https://twitter.com/share?url=${sharingUrl}&text=${sharingTitle}`}
             aria-label={`「${post.title}」をTwitterでシェアする`}
+            variant="link"
+            size="lg"
           />
           <LinkedIconButton.Facebook
             href={`https://www.facebook.com/share.php?u=${sharingUrl}`}
             aria-label={`「${post.title}」をFacebookでシェアする`}
+            variant="link"
+            size="lg"
           />
         </LinkedIconButton>
       </HStack>
