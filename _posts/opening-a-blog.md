@@ -134,7 +134,7 @@ export const Markdown: React.VFC<Props> = ({ rawHtml }) => (
 );
 ```
 
-このとき、`components` に React コンポーネントを渡すことで、任意のタグを自由に変換することができます。今回は、変換するコンポーネントを[components/markdowns/\_components]()の中に定義しました。
+このとき、`components` に React コンポーネントを渡すことで、任意のタグを自由に変換することができます。今回は、変換するコンポーネントを[components/markdowns/\_components](https://github.com/YTakahashii/blog/tree/main/src/components/markdowns/_components)の中に定義しました。
 
 変換する対象は、[`<table />`](https://github.com/YTakahashii/blog/blob/573224fa61a263d26c861aaea6696ad22f0a5469/src/components/markdowns/_components/table.tsx#L1)のように、Chakra UI のコンポーネントに置き換えるタグと、[`<a />`](https://github.com/YTakahashii/blog/blob/573224fa61a263d26c861aaea6696ad22f0a5469/src/components/markdowns/_components/a.tsx#L1)のように、Props に応じて、レンダリングするコンポーネントを出し分けるタグです。
 
