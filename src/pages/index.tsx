@@ -1,5 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { getAllPosts } from 'src/lib/api';
+import { getAllPosts } from 'src/lib/getPost';
 import { Post } from 'src/types/Post';
 import { PostList } from 'src/components/layouts/PostList';
 import { Text, Heading, VStack } from '@chakra-ui/react';

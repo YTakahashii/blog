@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { getAllPosts, getPostBySlug } from 'src/lib/api';
+import { getAllPosts, getPostBySlug } from 'src/lib/getPost';
 import { markdownToHtml } from 'src/lib/markdownToHtml';
 import { Post } from 'src/types/Post';
 import { Markdown } from 'src/components/markdowns';
