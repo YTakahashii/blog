@@ -12,13 +12,13 @@ export async function markdownToHtml(markdown: string) {
     .use(remarkParse) // md -> mdast
     .use(remarkGitHub) // GitHub md
     .use(remarkRehype, { allowDangerousHtml: true }) // mdast -> hast
-    .use(rehypeRaw)
+    .use(rehypeRaw) // hast内の生HTMLをhastに変換
     .use(rehypeShiki, {
       highlighter: await getHighlighter({
-        theme: 'material-theme-ocean',
+        theme: 'github-dark',
       }),
     }) // highlight <code />
-    .use(rehypeStringify) // hast -> html
+    .use(rehypeStringify) // hast -> raw html
     .processSync(markdown);
 
   return result.toString();
