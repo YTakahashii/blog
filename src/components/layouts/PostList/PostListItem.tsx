@@ -13,18 +13,12 @@ export const PostListItem: React.VFC<Props> = ({ post }) => (
     <Divider />
     <VStack align="stretch" spacing={5}>
       <VStack align="stretch" spacing={1}>
-        <Text m={0}>{DateFormatter.splitBySlash(post?.publishDate)}</Text>
-        <InternalLink href={post?.slug ?? ''}>
-          <Heading as="h2" fontSize="2xl" m={0}>
-            {post.title}
-          </Heading>
-        </InternalLink>
+        <Text m={0}>{DateFormatter.splitBySlash(post.publishDate)}</Text>
+        <Heading as="h2" fontSize="2xl" color="linkedin.700" m={0}>
+          <InternalLink href={`/${post.slug}`}>{post.title}</InternalLink>
+        </Heading>
       </VStack>
-      <Text m={0}>{post?.excerpt}</Text>
-      <InternalLink href={post?.slug ?? ''} aria-label={`${post.title}の続きを読む`} color="linkedin.700">
-        続きを読む
-        <ArrowForwardIcon />
-      </InternalLink>
+      <Text m={0}>{post.excerpt}</Text>
     </VStack>
   </VStack>
 );
