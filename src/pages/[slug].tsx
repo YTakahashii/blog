@@ -18,7 +18,7 @@ const PostPage: NextPage<Props> = ({ post }) => {
       <Script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" />
       <Box as="article">
         <PostHeader post={post} />
-        <Markdown rawHtml={post?.content ?? ''} />
+        <Markdown rawHtml={post.content ?? ''} />
         <Footer>
           <Footer.ShareOnSns post={post} />
           <Footer.BackToTop />
