@@ -7,7 +7,6 @@ import { PostHeader } from 'src/components/layouts/PostHeader';
 import { Box } from '@chakra-ui/react';
 import { Footer } from 'src/components/layouts/Footer';
 import { MetaData } from 'src/components/bases/MetaData';
-import Script from 'next/script';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -15,7 +14,6 @@ const PostPage: NextPage<Props> = ({ post }) => {
   return (
     <>
       <MetaData post={post} />
-      <Script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" />
       <Box as="article">
         <PostHeader post={post} />
         <Markdown rawHtml={post.content ?? ''} />

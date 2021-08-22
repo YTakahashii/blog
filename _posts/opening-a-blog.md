@@ -16,7 +16,9 @@ ogImage:
 
 ゴールデンウィークから作り始めて、休日にちまちまやっていたので、随分時間がかかってしまいましたが、いい感じに仕上がってとりあえず満足しています。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ゴールデンウィークなので、ブログを作りはじめた <a href="https://t.co/wpIXkEehwl">pic.twitter.com/wpIXkEehwl</a></p>&mdash; yuchan (@Wakeupsloth) <a href="https://twitter.com/Wakeupsloth/status/1389551048017080322?ref_src=twsrc%5Etfw">May 4, 2021</a></blockquote>
+```twitter
+1389551048017080322
+```
 
 以降のセクションでは、技術スタックと、実装に一番の時間を要した Markdown ファイルから React コンポーネントに変換するまでの処理の詳細について振り返ります。
 
