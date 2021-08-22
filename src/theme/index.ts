@@ -22,26 +22,26 @@ export const theme = extendTheme({
       },
       'h1, h2, h3, h4, h5, h6': {
         fontWeight: 'bold',
-        mt: 12,
-        mb: 6,
+        mt: { md: 12, base: 6 },
+        mb: { md: 6, base: 3 },
       },
       h1: {
-        fontSize: '4xl',
+        fontSize: { md: '4xl', base: '3xl' },
       },
       h2: {
-        fontSize: '3xl',
+        fontSize: { md: '3xl', base: '2xl' },
       },
       h3: {
-        fontSize: '2xl',
+        fontSize: { md: '2xl', base: 'xl' },
       },
       h4: {
-        fontSize: 'xl',
+        fontSize: { md: 'xl', base: 'lg' },
       },
       h5: {
-        fontSize: 'lg',
+        fontSize: { md: 'lg', base: 'md' },
       },
       h6: {
-        fontSize: 'md',
+        fontSize: { md: 'md', base: 'sm' },
       },
       p: {
         my: 5,
