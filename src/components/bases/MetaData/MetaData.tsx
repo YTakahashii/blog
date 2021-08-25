@@ -33,7 +33,7 @@ export const MetaData: React.VFC<Props> = ({ post }) => {
       <meta name="twitter:site" content={`@${TWITTER_ID}`} />
       <meta name="twitter:creator" content={`@${TWITTER_ID}`} />
 
-      <meta name="viewport" content="viewport-fit=cover,width=device-width,initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width" />
 
       {noIndex && <meta name="robots" content="noindex,nofollow,noarchive" />}
     </Head>
