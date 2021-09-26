@@ -13,7 +13,7 @@ export const PostHeader: React.VFC<Props> = ({ post }) => (
     <VStack spacing={4}>
       <VStack spacing={0}>
         <Text m={0}>{DateFormatter.splitBySlash(post.publishDate)}</Text>
-        <Heading as="h1" fontSize={{ lg: '5xl', md: '4xl', base: '3xl' }}>
+        <Heading as="h1" fontSize={{ lg: '5xl', md: '4xl', base: '3xl' }} textAlign="center">
           {post.title}
         </Heading>
       </VStack>
