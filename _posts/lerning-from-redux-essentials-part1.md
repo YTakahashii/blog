@@ -10,10 +10,10 @@ ogImage:
 アプリケーションの状態管理は、フロントエンド開発で注目されているトピックの 1 つです。
 React のグローバル状態管理ライブラリといえば、2，3 年前は Redux 一強でしたが、2021 年現在は、[Apollo Client](https://www.apollographql.com/docs/react/), [Recoil](https://recoiljs.org/), [jotai](https://jotai.pmnd.rs/), [SWR](https://swr.vercel.app/) 等、様々なものがあります。
 
-私は、2019 年の 3 月頃まで約 2 年ほど Redux を使った開発を経験していましたが、その後は SWR や Apollo Client を採用したプロジェクトで開発していたため、しばらく Redux から離れていました。
+私は、2020 年の 3 月頃まで約 2 年ほど Redux を使った開発を経験していましたが、その後は SWR や Apollo Client を採用したプロジェクトで開発していたため、しばらく Redux から離れていました。
 ですが、この度新卒エンジニアとして、9 月から Redux を使っているプロダクトの開発チームに本配属され、再び Redux と真剣に向き合うことになりました！
 
-そんな中、先日参加した[Souzoh Tech Talk #03: Frontend](https://mercari.connpass.com/event/221978/)の中で紹介された、["feature pattern"](https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic) という Redux 推奨のディレクトリ構成の話がきっかけで、Redux のドキュメントが 2019 年当時より大幅にアップデートされていることを知りました。
+そんな中、先日参加した[Souzoh Tech Talk #03: Frontend](https://mercari.connpass.com/event/221978/)の中で紹介された、["feature pattern"](https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic) という Redux 推奨のディレクトリ構成の話がきっかけで、Redux のドキュメントが 2020 年当時より大幅にアップデートされていることを知りました。
 
 これは Redux を学び直す良い機会だなと思い、ここ 1 週間くらい、公式チュートリアルの Redux Essentials を読みながら、JavaScript を TypeScript に変換しつつ写経することで、redux-toolkit を使ったモダンな 書き方や RTK Query について学びました。
 
